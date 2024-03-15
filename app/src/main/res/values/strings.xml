@@ -3,6 +3,9 @@
     <string name="app_name">MAFAG</string>
     <string name="choice_button">FAIRE UN CHOIX</string>
     <string name="open_button">OUVRIR LE MAFAG</string>
+    <string name="notify">NOTIFICATION</string>
+    <string name="channel_name">notifMAFAG</string>
+    <string name="channel_description">notifications from MAFAG</string>
 
     <!--companie names -->
     <string name="google_name">Google</string>
