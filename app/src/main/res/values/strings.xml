@@ -1,3 +1,19 @@
 <resources>
+    <!--static ressources -->
     <string name="app_name">MAFAG</string>
+    <string name="choice_button">FAIRE UN CHOIX</string>
+    <string name="open_button">OUVRIR LE MAFAG</string>
+
+    <!--companie names -->
+    <string name="google_name">Google</string>
+    <string name="apple_name">Apple</string>
+    <string name="facebook_name">Facebook</string>
+    <string name="amazon_name">Amazon</string>
+    <string name="microsoft_name">Microsoft</string>
+    <!--companie url -->
+    <string name="google_url">www.google.com</string>
+    <string name="apple_url">www.apple.com</string>
+    <string name="facebook_url">www.facebook.com</string>
+    <string name="amazon_url">www.amazon.com</string>
+    <string name="microsoft_url">www.microsoft.com</string>
 </resources>
