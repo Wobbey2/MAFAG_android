@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
+import android.util.Log;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
 
         });
-
+        handleIntent(getIntent());
     }
 
     @Override
@@ -35,12 +37,22 @@ public class MainActivity extends AppCompatActivity {
         super.onNewIntent(intent);
         // Retrieve the image ID if it exists
         if (intent.hasExtra("chosenImageInfo")) {
-            imageInfo = (ImageInfo) getIntent().getSerializableExtra("chosenImageInfo");
+            imageInfo = (ImageInfo) intent.getSerializableExtra("chosenImageInfo");
             // Now you can use imageId as needed, for example:
+            Log.i("chosen name",imageInfo.getChosen_text());
+            Log.i("chosen url",imageInfo.getChosen_url());
+
             setEditTextValues(imageInfo);
         }
     }
-
+    private void handleIntent(Intent intent) {
+        if (intent != null && intent.hasExtra("chosenImageInfo")) {
+            imageInfo = (ImageInfo) intent.getSerializableExtra("chosenImageInfo");
+            Log.i("chosen name", imageInfo.getChosen_text());
+            Log.i("chosen url", imageInfo.getChosen_url());
+            setEditTextValues(imageInfo);
+        }
+    }
     private void setEditTextValues(ImageInfo imageInfo){
         TextView editText = findViewById(R.id.choiceTextArea);
         TextView editUrl = findViewById(R.id.choiceUrlArea);

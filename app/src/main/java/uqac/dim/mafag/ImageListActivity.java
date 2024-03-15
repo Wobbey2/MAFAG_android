@@ -2,6 +2,7 @@ package uqac.dim.mafag;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -46,6 +47,9 @@ public class ImageListActivity extends AppCompatActivity {
                 chosenImage.setChosen_text(getString(R.string.google_name));
                 chosenImage.setChosen_url(getString(R.string.google_url));
             }
+            Log.i("chosen name in ImageList", chosenImage.getChosen_text());
+            Log.i("chosen url in ImageList", chosenImage.getChosen_url());
+
             Intent intent = new Intent(ImageListActivity.this, MainActivity.class);
             intent.putExtra("chosenImageInfo", chosenImage);
             startActivity(intent);
